@@ -1,7 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
+import os
 import json
-import os 
+import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from bs4 import BeautifulSoup
+
+
 product_id = 124893467
 next = True
 headers = {
@@ -9,6 +13,8 @@ headers = {
 }
 page= 1
 all_opinions_list = []
+
+#//*[@id="body"]/div/div/div/form/button
 
 while next:
     # page = 1
